@@ -11,17 +11,30 @@ package lab1pt2_astghikminasyan;
 public class GradedActivity {
     private double score;
 
+    /**
+     * Set the score
+     * @param score the input score to set
+     */
     public void setScore(double score) {
         this.score = score;
     }
 
+    /**
+     * Get the score
+     * @return the corresponding score
+     */
     public double getScore() {
         return score;
     }
     
+    /**
+     * Get the grade
+     * @return the corresponding letter grade
+     */
     public char getGrade() {
         char letterGrade;
         
+        // Point the scores to a letter grade
         if (score >=90) {
             letterGrade = 'A';
         } else if (score >= 80) {
