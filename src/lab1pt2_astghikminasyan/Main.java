@@ -18,7 +18,7 @@ public class Main {
         int questions = 100;
         int missed = 25;
         
-        // First output
+        // FIRST OUTPUT
         // Create a FinalExam instance
         FinalExam f1 = new FinalExam(questions, missed);
         
@@ -30,21 +30,21 @@ public class Main {
         System.out.printf("The exam grade is %c%n", f1.getGrade());
         System.out.println("");
         
-        // Second output
+        // SECOND OUTPUT
         // Create a PassFailExam instancecheck the output
         double minPassing = 60;
-        PassFailExam pfe = new PassFailExam(questions, missed, minPassing);
+        PassFailExam pfe1 = new PassFailExam(questions, missed, minPassing);
         
         // Check second output
         System.out.printf("How many questions on the final exam? %d%n", questions);
-        System.out.printf("How many questions did the student miss? %d%n", pfe.getNumMissed());
+        System.out.printf("How many questions did the student miss? %d%n", pfe1.getNumMissed());
         System.out.printf("What is the minimum passing score? %.0f%n", minPassing);
-        System.out.printf("Each question counts %.1f points%n", pfe.getPointsEach());
-        System.out.printf("The exam score is %.1f%n", pfe.getScore());
-        System.out.printf("The exam grade is %c%n", pfe.getGrade());
+        System.out.printf("Each question counts %.1f points%n", pfe1.getPointsEach());
+        System.out.printf("The exam score is %.1f%n", pfe1.getScore());
+        System.out.printf("The exam grade is %c%n", pfe1.getGrade());
         System.out.println("");
         
-        // Third output
+        // THIRD OUTPUT
         // Set variables
         double grammarPoints = 25;
         double spellingPoints = 18;
@@ -69,7 +69,22 @@ public class Main {
         System.out.printf("Grade: %c%n", e1.getGrade());
         System.out.println("");
         
-        // Fourth output
+        // FOURTH OUTPUT
+        // Create GradedActivity subclasses and iniate them
+        double minPassing2 = 70;
+        GradedActivity g2 = new GradedActivity();
+        g2.setScore(85);
+        PassFailExam pfe2 = new PassFailExam(100, 15, minPassing);
+        Essay e2 = new Essay();
+        e2.setScore(20, 20, 20, 20);
+        FinalExam fe2 = new FinalExam(100, 20);
         
+        // Create a CourseGrades instance
+        CourseGrades cg = new CourseGrades();
+        cg.setLab(g2);
+        cg.setPassFailExam(pfe2);
+        cg.setEssay(e2);
+        cg.setFinalExam(fe2);
+        System.out.println(cg.toString());
     }
 }
