@@ -28,16 +28,16 @@ public class FinalExam extends GradedActivity {
     }
 
     /**
-     * Get the number of points each question is worth
-     * @return the corresponding points for each question
+     * Getter for pointsEach
+     * @return the pointsEach parameter
      */
     public double getPointsEach() {
         return pointsEach;
     }
 
     /**
-     Get the number of questions missed by the student
-     * @return the corresponding questions missed by the student
+     * Getter for numMissed
+     * @return the numMissed parameter
      */
     public int getNumMissed() {
         return numMissed;

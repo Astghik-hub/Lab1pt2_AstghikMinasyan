@@ -12,23 +12,23 @@ public class GradedActivity {
     private double score;
 
     /**
-     * Set the score
-     * @param score the input score to set
+     * Setter for score
+     * @param score the input double to set as score
      */
     public void setScore(double score) {
         this.score = score;
     }
 
     /**
-     * Get the score
-     * @return the corresponding score
+     * Getter for score
+     * @return the score parameter
      */
     public double getScore() {
         return score;
     }
     
     /**
-     * Get the grade
+     * Getter for grade
      * @return the corresponding letter grade
      */
     public char getGrade() {
