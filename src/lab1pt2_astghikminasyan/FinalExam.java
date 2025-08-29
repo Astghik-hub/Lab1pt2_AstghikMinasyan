@@ -26,6 +26,20 @@ public class FinalExam extends GradedActivity {
         double numericScore = 100 - (missed * pointsEach);
         super.setScore(numericScore);
     }
-    
-    
+
+    /**
+     * Get the number of points each question is worth
+     * @return the corresponding points for each question
+     */
+    public double getPointsEach() {
+        return pointsEach;
+    }
+
+    /**
+     Get the number of questions missed by the student
+     * @return the corresponding questions missed by the student
+     */
+    public int getNumMissed() {
+        return numMissed;
+    }
 }
