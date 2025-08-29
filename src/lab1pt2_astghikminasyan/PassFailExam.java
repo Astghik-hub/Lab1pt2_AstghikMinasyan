@@ -23,6 +23,10 @@ public class PassFailExam extends PassFailActivity {
         super(minPassing);
         this.numQuestions = questions;
         this.numMissed = missed;
+        
+        pointsEach = 100 / questions;
+        double numericScore = 100 - (missed * pointsEach);
+        super.setScore(numericScore);
     }
 
     /**
