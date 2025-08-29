@@ -81,6 +81,14 @@ public class Essay extends GradedActivity {
     public double getCorrectLength() {
         return correctLength;
     }
+
+     /**
+     * Getter for content
+     * @return the content parameter
+     */
+    public double getContent() {
+        return content;
+    }
     
     /**
      * Getter for score in the superclass
