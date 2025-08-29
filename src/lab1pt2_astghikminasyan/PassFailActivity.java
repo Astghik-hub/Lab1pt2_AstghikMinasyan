@@ -19,6 +19,10 @@ public class PassFailActivity extends GradedActivity {
         this.minPassingScore = minPassingScore;
     }
     
+    /**
+     * Override getter for grade
+     * @return the final grade 'P' or 'F' 
+     */
     @Override
     public char getGrade() {
         char passFail;
