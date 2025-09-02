@@ -8,7 +8,7 @@ package lab1pt2_astghikminasyan;
  *
  * @author 2466920
  */
-public class CourseGrades {
+public class CourseGrades implements Analyzable {
     GradedActivity[] grades;
     final int NUM_GRADES = 4;
     
@@ -66,5 +66,42 @@ public class CourseGrades {
         str += String.format("Final Exam Score: %.1f %s: %c%n", grades[3].getScore(), "Grade", grades[3].getGrade());
         
         return str;
+    }
+
+    @Override
+    public double getAverage() {
+        double sum = 0;
+        
+        for (GradedActivity grade : grades) {
+            sum += grade.getScore();
+        }
+        
+        return sum / grades.length;
+    }
+
+    @Override
+    public GradedActivity getHighest() {
+        GradedActivity highest = grades[0];
+        
+        for (GradedActivity grade : grades) {
+            if (grade != null && grade.getScore() > highest.getScore()) {
+                highest = grade;
+            }
+        }
+        
+        return highest;
+    }
+
+    @Override
+    public GradedActivity getLowest() {
+        GradedActivity lowest = grades[0];
+        
+        for (GradedActivity grade : grades) {
+            if (grade != null && grade.getScore() < lowest.getScore()) {
+                lowest = grade;
+            }
+        }
+        
+        return lowest;
     }
 }

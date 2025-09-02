@@ -69,12 +69,12 @@ public class Main {
         System.out.printf("Grade: %c%n", e1.getGrade());
         System.out.println("");
         
-        // FOURTH OUTPUT
+        // FOURTH AND LAST OUTPUT
         // Create GradedActivity subclasses and iniate them
         double minPassing2 = 70;
         GradedActivity g2 = new GradedActivity();
         g2.setScore(85);
-        PassFailExam pfe2 = new PassFailExam(100, 15, minPassing);
+        PassFailExam pfe2 = new PassFailExam(100, 15, minPassing2);
         Essay e2 = new Essay();
         e2.setScore(20, 20, 20, 20);
         FinalExam fe2 = new FinalExam(100, 20);
@@ -86,5 +86,10 @@ public class Main {
         cg.setEssay(e2);
         cg.setFinalExam(fe2);
         System.out.println(cg.toString());
+        
+        // Find average, highest and lowest scores of grades
+        System.out.printf("Average score: %.1f%n", cg.getAverage());
+        System.out.printf("Hihgest score: %.1f%n", cg.getHighest().getScore());
+        System.out.printf("Average score: %.1f%n", cg.getLowest().getScore());
     }
 }
