@@ -70,7 +70,7 @@ public class CourseGrades implements Analyzable {
         str += String.format("Lab Score: %.1f %12s: %c%n", grades[0].getScore(), "Grade", grades[0].getGrade());
         str += String.format("Pass/Fail Exam Score: %.1f %10s: %c%n", grades[1].getScore(), "Grade", grades[1].getGrade());
         str += String.format("Essay Score: %.1f %10s: %c%n", grades[2].getScore(), "Grade", grades[2].getGrade());
-        str += String.format("Final Exam Score: %.1f %s: %c%n", grades[3].getScore(), "Grade", grades[3].getGrade());
+        str += String.format("Final Exam Score: %.1f %s: %c", grades[3].getScore(), "Grade", grades[3].getGrade());
 
         return str;
     }
