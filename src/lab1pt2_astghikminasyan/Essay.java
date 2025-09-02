@@ -6,7 +6,9 @@ package lab1pt2_astghikminasyan;
 
 /**
  *
- * @author 2466920
+ * @author Astghik Minasyan
+ * Lab_01_pt2: Review OOP
+ * 09/01/2025
  */
 public class Essay extends GradedActivity {
     private double grammar;
@@ -16,18 +18,20 @@ public class Essay extends GradedActivity {
 
     /**
      * Setter for the score in the superclass
+     *
      * @param grammar the amount of grammar points earned by the student
      * @param spelling the amount of spelling points earned by the student
      * @param correctLength the amount of length points earned by the student
      * @param content the amount of content points earned by the student
      */
-    public void setScore (double grammar, double spelling, double correctLength, double content) {
+    public void setScore(double grammar, double spelling, double correctLength, double content) {
         double score = grammar + spelling + correctLength + content;
         super.setScore(score);
     }
-    
+
     /**
      * Setter for grammar
+     *
      * @param grammar the amount of grammar points earned by the student
      */
     public void setGrammar(double grammar) {
@@ -36,6 +40,7 @@ public class Essay extends GradedActivity {
 
     /**
      * Setter for spelling
+     *
      * @param spelling the amount of spelling points earned by the student
      */
     public void setSpelling(double spelling) {
@@ -44,6 +49,7 @@ public class Essay extends GradedActivity {
 
     /**
      * Setter for correctLength
+     *
      * @param correctLength the amount of length points earned by the student
      */
     public void setCorrectLength(double correctLength) {
@@ -52,6 +58,7 @@ public class Essay extends GradedActivity {
 
     /**
      * Setter for content
+     *
      * @param content the amount of content points earned by the student
      */
     public void setContent(double content) {
@@ -60,6 +67,7 @@ public class Essay extends GradedActivity {
 
     /**
      * Getter for grammar
+     *
      * @return the grammar parameter
      */
     public double getGrammar() {
@@ -68,6 +76,7 @@ public class Essay extends GradedActivity {
 
     /**
      * Getter for spelling
+     *
      * @return the spelling parameter
      */
     public double getSpelling() {
@@ -76,22 +85,25 @@ public class Essay extends GradedActivity {
 
     /**
      * Getter for correctLength
+     *
      * @return the correctLength parameter
      */
     public double getCorrectLength() {
         return correctLength;
     }
 
-     /**
+    /**
      * Getter for content
+     *
      * @return the content parameter
      */
     public double getContent() {
         return content;
     }
-    
+
     /**
      * Getter for score in the superclass
+     *
      * @return the score parameter
      */
     @Override

@@ -2,11 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
+
+//github URL: https://github.com/Astghik-hub/Lab1pt2_AstghikMinasyan.git
 package lab1pt2_astghikminasyan;
 
 /**
  *
- * @author 2466920
+ * @author Astghik Minasyan
+ * Lab_01_pt2: Review OOP
+ * 09/01/2025
  */
 public class Main {
 
@@ -17,11 +21,11 @@ public class Main {
         // Set varables
         int questions = 100;
         int missed = 25;
-        
+
         // FIRST OUTPUT
         // Create a FinalExam instance
         FinalExam f1 = new FinalExam(questions, missed);
-        
+
         // Check first output
         System.out.printf("How many questions on the final exam? %d%n", questions);
         System.out.printf("How many questions did the student miss? %d%n", f1.getNumMissed());
@@ -29,12 +33,12 @@ public class Main {
         System.out.printf("The exam score is %.1f%n", f1.getScore());
         System.out.printf("The exam grade is %c%n", f1.getGrade());
         System.out.println("");
-        
+
         // SECOND OUTPUT
         // Create a PassFailExam instancecheck the output
         double minPassing = 60;
         PassFailExam pfe1 = new PassFailExam(questions, missed, minPassing);
-        
+
         // Check second output
         System.out.printf("How many questions on the final exam? %d%n", questions);
         System.out.printf("How many questions did the student miss? %d%n", pfe1.getNumMissed());
@@ -43,14 +47,14 @@ public class Main {
         System.out.printf("The exam score is %.1f%n", pfe1.getScore());
         System.out.printf("The exam grade is %c%n", pfe1.getGrade());
         System.out.println("");
-        
+
         // THIRD OUTPUT
         // Set variables
         double grammarPoints = 25;
         double spellingPoints = 18;
         double lengthPoints = 20;
         double contentPoints = 25;
-        
+
         // Create an Essay instance to check the output
         Essay e1 = new Essay();
         e1.setGrammar(grammarPoints);
@@ -58,7 +62,7 @@ public class Main {
         e1.setCorrectLength(lengthPoints);
         e1.setContent(contentPoints);
         e1.setScore(grammarPoints, spellingPoints, lengthPoints, contentPoints);
-        
+
         // Check third output
         System.out.println("Term paper:");
         System.out.printf("Grammar points: %.1f%n", e1.getGrammar());
@@ -68,7 +72,7 @@ public class Main {
         System.out.printf("Total points: %.1f%n", e1.getScore());
         System.out.printf("Grade: %c%n", e1.getGrade());
         System.out.println("");
-        
+
         // FOURTH AND LAST OUTPUT
         // Create GradedActivity subclasses and iniate them
         double minPassing2 = 70;
@@ -78,7 +82,7 @@ public class Main {
         Essay e2 = new Essay();
         e2.setScore(20, 20, 20, 20);
         FinalExam fe2 = new FinalExam(100, 20);
-        
+
         // Create a CourseGrades instance
         CourseGrades cg = new CourseGrades();
         cg.setLab(g2);
@@ -86,7 +90,7 @@ public class Main {
         cg.setEssay(e2);
         cg.setFinalExam(fe2);
         System.out.println(cg.toString());
-        
+
         // Find average, highest and lowest scores of grades
         System.out.printf("Average score: %.1f%n", cg.getAverage());
         System.out.printf("Hihgest score: %.1f%n", cg.getHighest().getScore());

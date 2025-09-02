@@ -6,7 +6,9 @@ package lab1pt2_astghikminasyan;
 
 /**
  *
- * @author 2466920
+ * @author Astghik Minasyan
+ * Lab_01_pt2: Review OOP
+ * 09/01/2025
  */
 public class FinalExam extends GradedActivity {
     private int numQuestions;
@@ -15,13 +17,14 @@ public class FinalExam extends GradedActivity {
 
     /**
      * Constructor
+     *
      * @param questions the number of questions
      * @param missed the number of questions missed
      */
     public FinalExam(int questions, int missed) {
         this.numQuestions = questions;
         this.numMissed = missed;
-        
+
         pointsEach = 100 / questions;
         double numericScore = 100 - (missed * pointsEach);
         super.setScore(numericScore);
@@ -29,6 +32,7 @@ public class FinalExam extends GradedActivity {
 
     /**
      * Getter for pointsEach
+     *
      * @return the pointsEach parameter
      */
     public double getPointsEach() {
@@ -37,6 +41,7 @@ public class FinalExam extends GradedActivity {
 
     /**
      * Getter for numMissed
+     *
      * @return the numMissed parameter
      */
     public int getNumMissed() {

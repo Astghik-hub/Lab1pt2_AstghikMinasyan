@@ -6,13 +6,16 @@ package lab1pt2_astghikminasyan;
 
 /**
  *
- * @author 2466920
+ * @author Astghik Minasyan
+ * Lab_01_pt2: Review OOP
+ * 09/01/2025
  */
 public class GradedActivity {
     private double score;
 
     /**
      * Setter for score
+     *
      * @param score the input double to set as score
      */
     public void setScore(double score) {
@@ -21,21 +24,23 @@ public class GradedActivity {
 
     /**
      * Getter for score
+     *
      * @return the score parameter
      */
     public double getScore() {
         return score;
     }
-    
+
     /**
      * Getter for grade
+     *
      * @return the corresponding letter grade
      */
     public char getGrade() {
         char letterGrade;
-        
+
         // Point the scores to a letter grade
-        if (score >=90) {
+        if (score >= 90) {
             letterGrade = 'A';
         } else if (score >= 80) {
             letterGrade = 'B';
@@ -46,7 +51,7 @@ public class GradedActivity {
         } else {
             letterGrade = 'F';
         }
-        
+
         return letterGrade;
     }
 }

@@ -6,7 +6,9 @@ package lab1pt2_astghikminasyan;
 
 /**
  *
- * @author 2466920
+ * @author Astghik Minasyan
+ * Lab_01_pt2: Review OOP
+ * 09/01/2025
  */
 public class PassFailExam extends PassFailActivity {
     private int numQuestions;
@@ -15,6 +17,7 @@ public class PassFailExam extends PassFailActivity {
 
     /**
      * Constructor
+     *
      * @param questions the number of questions in the exam
      * @param missed the number of questions missed by the student
      * @param minPassing the minimum passing grade for the exam
@@ -23,7 +26,7 @@ public class PassFailExam extends PassFailActivity {
         super(minPassing);
         this.numQuestions = questions;
         this.numMissed = missed;
-        
+
         pointsEach = 100 / questions;
         double numericScore = 100 - (missed * pointsEach);
         super.setScore(numericScore);
@@ -31,6 +34,7 @@ public class PassFailExam extends PassFailActivity {
 
     /**
      * Getter for pointsEach
+     *
      * @return the pointsEach parameter
      */
     public double getPointsEach() {
@@ -39,6 +43,7 @@ public class PassFailExam extends PassFailActivity {
 
     /**
      * Getter for numMissed
+     *
      * @return the numMissed parameter
      */
     public int getNumMissed() {

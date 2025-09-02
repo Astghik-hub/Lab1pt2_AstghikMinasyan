@@ -6,32 +6,38 @@ package lab1pt2_astghikminasyan;
 
 /**
  *
- * @author 2466920
+ * @author Astghik Minasyan
+ * Lab_01_pt2: Review OOP
+ * 09/01/2025
  */
 public class PassFailActivity extends GradedActivity {
     private double minPassingScore;
 
     /**
      * Constructor
-     * @param minPassingScore the minimum passing grade for the activity 
+     *
+     * @param minPassingScore the minimum passing grade for the activity
      */
     public PassFailActivity(double minPassingScore) {
         this.minPassingScore = minPassingScore;
     }
-    
+
     /**
      * Override getter for grade
-     * @return the final grade 'P' or 'F' 
+     *
+     * @return the final grade 'P' or 'F'
      */
     @Override
     public char getGrade() {
         char passFail;
-        
+
         // Determine if passFail is 'P' or 'F'
         if (super.getScore() > minPassingScore) {
             passFail = 'P';
-        } else passFail = 'F';
-        
+        } else {
+            passFail = 'F';
+        }
+
         return passFail;
     }
 }
